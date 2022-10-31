@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PortFolio:)</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    gridTemplateColumns: {
+                        '16': 'repeat(auto-fit, minmax(250px, 1fr))'
+                    }
+                },
+                screens: {
+
+
+                    'md': { 'max': '600px' },
+                    // => @media (max-width: 600px) { ... }
+                }
+            }
+        }
+    </script>
+
+</head>
+<!-- <style>
+    .nav-a::after {
+        content: '';
+        width: 0;
+        height: 3px;
+        background-color: #ff004f;
+        position: absolute;
+        left: 0;
+        bottom: -6px;
+        transition: 0.5s;
+    }
+
+    .nav-a:hover::after {
+        width: 100%;
+
+    }
+</style> -->
+
+<body class="p-0 m-0 box-border  bg-slate-800 font-sans text-white">
+    <div
+        class="w-full h-screen bg-[url('/images/background.png')] md:bg-[url('/images/phone-background.png')] bg-cover bg-center">
+        <div id="home" class="py-2.5 px-[10%]">
+            <nav class="flex flex-wrap flex-row items-center justify-between">
+                <img src="/images/logo.png" alt="logo" class="w-20 h-20">
+                <ul id="manu"
+                    class="flex flex-wrap md:duration-[0.5s] md:block md:bg-[#ff004f] md:z-[2]  md:fixed md:top-0 md:right-[-200px] md:w-[200px] md:h-screen md:pt-12">
+                    <li class=" my-2.5 mx-5 inline-block md:block md:m-6"><a
+                            class="text-base relative after:content-[''] after:bg-red-800  after:absolute after:w-0 after:left-0 after:bottom-[-6px] after:h-1 after:duration-500 hover:after:w-full "
+                            href="#home">Home</a></li>
+                    <li class=" my-2.5 mx-5 inline-block md:block md:m-6"><a
+                            class="text-base relative after:content-[''] after:bg-red-800  after:absolute after:w-0 after:left-0 after:bottom-[-6px] after:h-1 after:duration-500 hover:after:w-full"
+                            href="#about">About</a></li>
+                    <li class=" my-2.5 mx-5 inline-block md:block md:m-6"><a
+                            class="text-base relative after:content-[''] after:bg-red-800  after:absolute after:w-0 after:left-0 after:bottom-[-6px] after:h-1 after:duration-500 hover:after:w-full"
+                            href="#service">Service</a></li>
+                    <li class=" my-2.5 mx-5 inline-block md:block md:m-6"><a
+                            class="text-base relative after:content-[''] after:bg-red-800  after:absolute after:w-0 after:left-0 after:bottom-[-6px] after:h-1 after:duration-500 hover:after:w-full"
+                            href="#portfolio">Portfolio</a></li>
+                    <li class=" my-2.5 mx-5 inline-block md:block md:m-6"><a
+                            class="text-base relative after:content-[''] after:bg-red-800  after:absolute after:w-0 after:left-0 after:bottom-[-6px] after:h-1 after:duration-500 hover:after:w-full"
+                            href="#contact">Contact</a></li>
+                    <i class="fas fa-times hidden md:absolute md:top-6 left-6 cursor-pointer md:block md:text-[25px]  "
+                        onclick="closemanu()"></i>
+
+                </ul>
+                <i class="fas fa-bars hidden  cursor-pointer md:block md:text-[25px] " onclick="openmanu()"></i>
+            </nav>
+            <div class="mt-[20%] md:mt-[100%]  text-[30px] md:text-[16px]">
+                <p>Digital Marketer</p>
+                <h1 class="text-[60px] md:text-[30px]">Hi, I'm MD Wahid <br>from Bangladesh</h1>
+            </div>
+        </div>
+    </div>
+    <div class="p-20 md:p-5 text-[#ababab]">
+        <div>
+            <div class="flex justify-between flex-wrap">
+                <div class="basis-[35%] md:basis-full md:mb-7">
+                    <img class="w-full rounded-2xl" src="images/user.png" alt="user">
+                </div>
+                <div id="about" class="basis-3/5 md:basis-full md:text-[14px]">
+                    <h1 class="text-6xl md:text-[40px] text-white font-medium">About me</h1>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid, illum voluptas. Excepturi
+                        saepe error similique a veritatis quas placeat, alias adipisci obcaecati magnam quia quasi totam
+                        quos accusamus exercitationem harum? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Perspiciatis explicabo odio accusantium in dicta veritatis quos eaque ex ipsum reiciendis magni
+                        asperiores, eligendi aperiam quas maxime amet, ad quibusdam quisquam!
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam accusantium debitis cum
+                        tempora! Magni quod ad voluptatibus beatae in non tenetur placeat, voluptatem quis rerum
+                        deleniti incidunt impedit optio minus?
+                    </p>
+                    <div class="flex mt-5 mb-10">
+                        <p onclick="opentab('skills')" class="mr-12 after:w-full tablink text-[18px] font-medium cursor-pointer relative 
+                         after:content-[''] after:bg-red-800  after:absolute after:w-0 after:left-0 after:bottom-[-6px] after:h-1 after:duration-500 
+                        ">Skills</p>
+                        <p onclick="opentab('experience')" class="mr-12 tablink text-[18px] font-medium cursor-pointer 
+                        relative after:content-[''] after:bg-red-800  after:absolute after:w-0 after:left-0 after:bottom-[-6px] after:h-1 after:duration-500 
+                         ">Experience</p>
+                        <p onclick="opentab('education')" class="mr-12 tablink text-[18px] font-medium cursor-pointer relative after:content-[''] after:bg-red-800  after:absolute after:w-0 after:left-0 after:bottom-[-6px] after:h-1 after:duration-500 
+                          ">Education</p>
+                    </div>
+                    <div class="block tabcontent" id="skills">
+                        <ul>
+                            <li class="my-2.5"><span class="text-[#b54769] text-[14px]">Social Markating</span><br> Add
+                                Page Bost
+                                Page Manegment</li>
+                            <li class="my-2.5"><span class="text-[#b54769] text-[14px]">Social Markating</span><br> Add
+                                Page Bost
+                                Page Manegment</li>
+                            <li class="my-2.5"><span class="text-[#b54769] text-[14px]">Social Markating</span><br> Add
+                                Page Bost
+                                Page Manegment</li>
+                        </ul>
+                    </div>
+                    <div class="hidden tabcontent" id="experience">
+                        <ul>
+                            <li class="my-2.5"><span class="text-[#b54769] text-[14px]">Social Markating</span><br> Add
+                                2020-2022
+                                Page Manegment</li>
+                            <li class="my-2.5"><span class="text-[#b54769] text-[14px]">Social Markating</span><br> Add
+                                2020-2022
+                                Page Manegment</li>
+                            <li class="my-2.5"><span class="text-[#b54769] text-[14px]">Social Markating</span><br> Add
+                                2020-2022
+                                Page Manegment</li>
+                        </ul>
+                    </div>
+                    <div class="hidden tabcontent" id="education">
+                        <ul>
+                            <li class="my-2.5"><span class="text-[#b54769] text-[14px]">Social Markating</span><br> Add
+                                SSC
+                                Page Manegment</li>
+                            <li class="my-2.5"><span class="text-[#b54769] text-[14px]">Social Markating</span><br> Add
+                                HSC
+                                Page Manegment</li>
+                            <li class="my-2.5"><span class="text-[#b54769] text-[14px]">Social Markating</span><br> Add
+                                hsc
+                                Page Manegment</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="py-7 px-12 ">
+        <div id="service">
+            <h1 class="text-4xl text-white font-medium">My Services</h1>
+            <div class="grid grid-cols-16 gap-y-[40px] gap-x-[40px] mt-[50px]">
+
+                <div
+                    class="bg-[#262626] p-10 text-[13px] font-light rounded-lg duration-500 hover:bg-red-500 hover:translate-y-[-10px] ">
+                    </i><i class="fa-solid fa-apple-whole text-4xl "></i>
+                    <h2 class="text-2xl text-[30px] font-medium mb-4">Markating</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia nisi ex architecto? Iste culpa
+                        aut inventore. Rerum debitis unde aspernatur doloremque. Nemo accusamus a blanditiis, facilis
+                        perspiciatis repellat at officiis?</p>
+                    <a href="#" class="text-white text-[12px] mt-5 inline-block">Learn more</a>
+                </div>
+                <div
+                    class="bg-[#262626] p-10 text-[13px] font-light rounded-lg duration-500 hover:bg-red-500 hover:translate-y-[-10px] ">
+                    <i class="fa-sharp fa-solid fa-globe text-4xl "></i>
+                    <h2 class="text-2xl text-[30px] font-medium mb-4">Socials</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia nisi ex architecto? Iste culpa
+                        aut inventore. Rerum debitis unde aspernatur doloremque. Nemo accusamus a blanditiis, facilis
+                        perspiciatis repellat at officiis?</p>
+                    <a href="#" class="text-white text-[12px] mt-5 inline-block">Learn more</a>
+                </div>
+                <div
+                    class="bg-[#262626] p-10 text-[13px] font-light rounded-lg duration-500 hover:bg-red-500 hover:translate-y-[-10px] ">
+                    <i class="fa-sharp fa-solid fa-paperclip text-4xl "></i>
+                    <h2 class="text-2xl text-[30px] font-medium mb-4">Managment</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia nisi ex architecto? Iste culpa
+                        aut inventore. Rerum debitis unde aspernatur doloremque. Nemo accusamus a blanditiis, facilis
+                        perspiciatis repellat at officiis?</p>
+                    <a href="#" class="text-white text-[12px] mt-5 inline-block">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="px-12">
+        <div id="portfolio">
+            <h1 class="text-4xl text-white font-medium">My Work</h1>
+            <div class="grid grid-cols-16 gap-y-[40px] gap-x-[40px] mt-[50px]">
+                <div class="group rounded-xl relative overflow-hidden  duration-500 ">
+                    <img class=" group work w-full rounded-xl block duration-500 group-hover:scale-[1.1] "
+                        src="/images/work-1.png" alt="work-1">
+                    <div
+                        class="w-full h-0 bg-gradient-to-t from-[rgba(0,0,0,0.6)] to-blue-500 rounded-xl absolute left-0 bottom-0 overflow-hidden duration-500 flex items-center justify-center flex-col group-hover:py-10 group-hover:h-full text-center text-[14px] ">
+                        <h3 class="font-medium mb-5 text-[20px] ">Digital Marketing</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Qui animi digniss
+                            imos, quo hic quibusdam fugiat!
+                        </p>
+                        <a class="mt-5 text-blue-500 text-[18px] leading-[64px] bg-white w-16 h-16 rounded-[50%] text-center"
+                            href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class=" group rounded-xl relative overflow-hidden  duration-500  ">
+                    <img class=" group work w-full rounded-xl block duration-500 group-hover:scale-[1.1]"
+                        src="/images/work-2.png" alt="work-1">
+                    <div
+                        class="w-full h-0 bg-gradient-to-t from-[rgba(0,0,0,0.6)] to-blue-500 rounded-xl absolute left-0 bottom-0 overflow-hidden duration-500 flex items-center justify-center flex-col group-hover:py-10 group-hover:h-full text-center text-[14px] ">
+                        <h3 class="font-medium mb-5 text-[20px] ">Digital Marketing</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Qui animi digniss
+                            imos, quo hic quibusdam fugiat!
+                        </p>
+                        <a class="mt-5 text-blue-500 text-[18px] leading-[64px] bg-white w-16 h-16 rounded-[50%] text-center"
+                            href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class=" group rounded-xl relative overflow-hidden  duration-500 ">
+                    <img class=" group work w-full rounded-xl block duration-500 group-hover:scale-[1.1]"
+                        src="/images/work-3.png" alt="work-1">
+                    <div
+                        class="w-full h-0 bg-gradient-to-t from-[rgba(0,0,0,0.6)] to-blue-500 rounded-xl absolute left-0 bottom-0 overflow-hidden duration-500 flex items-center justify-center flex-col group-hover:py-10 group-hover:h-full text-center text-[14px] ">
+                        <h3 class="font-medium mb-5 text-[20px] ">Digital Marketing</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Qui animi digniss
+                            imos, quo hic quibusdam fugiat!
+                        </p>
+                        <a class="mt-5 text-blue-500 text-[18px] leading-[64px] bg-white w-16 h-16 rounded-[50%] text-center"
+                            href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#"
+                class="block my-12 mx-auto w-fit border border-red-600 px-12 py-4 rounded-md duration-500 hover:bg-red-600">
+                see more
+            </a>
+        </div>
+    </div>
+    <div>
+        <div class="py-7 px-12 " id="contact">
+            <div class="flex flex-wrap">
+                <div class="basis-[35%] md:basis-full">
+                    <h1 class="text-4xl text-white font-medium">Contact Me</h1>
+                    <p class="mt-8"><i class=" text-[#ff004f] mr-4 text-2xl fas fa-paper-plane"></i>contact@xyz.com</p>
+                    <p class="mt-8"><i class=" text-[#ff004f] mr-4 text-2xl fas fa-phone-square"></i>0123456789</p>
+                    <div>
+                        <a class="text-3xl mr-4 inline-block duration-500 hover:text-[#ff004f] hover:translate-y-[-5px]"
+                            href="#"><i class="mt-8 fab fa-facebook-square"></i></a>
+                        <a class="text-3xl mr-4 inline-block duration-500 hover:text-[#ff004f] hover:translate-y-[-5px]"
+                            href="#"><i class="mt-8 fab fa-twitter-square"></i></a>
+                        <a class="text-3xl mr-4 inline-block duration-500 hover:text-[#ff004f] hover:translate-y-[-5px]"
+                            href="#"><i class="mt-8 fab fa-instagram"></i></a>
+                        <a class="text-3xl mr-4 inline-block duration-500 hover:text-[#ff004f] hover:translate-y-[-5px]"
+                            href="#"><i class="mt-8 fab fa-linkedin"></i></a>
+                    </div>
+                    <a href="#" download
+                        class="inline-block my-12 mx-auto w-fit border border-red-600 px-12 py-4 rounded-md duration-500 hover:bg-red-600">Download
+                        CV</a>
+                </div>
+
+                <div class="basis-3/5 md:basis-full">
+                    <form class="w-full" name="submit-to-google-sheet">
+                        <input class="w-full border-0 outline-none bg-[#262626] p-4  text-lg rounded-md " type="text"
+                            required name="name" placeholder="Your Name">
+                        <input class="w-full border-0 outline-none bg-[#262626] p-4 mt-4 text-lg rounded-md " required
+                            type="email" name="email" placeholder="example@xyz.com">
+                        <textarea class="w-full border-0 outline-none bg-[#262626] p-4 mt-4 text-lg rounded-md "
+                            required name="message" rows="6" placeholder="Your Message"></textarea>
+                        <span class="block text-lime-500 mt-4" id="msg"> hello</span>
+                        <button type="submit"
+                            class="inline-block my-12 mx-auto w-fit border border-red-600 px-12 py-4 rounded-md duration-500 hover:bg-red-600">Submit</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+        <div class="w-full text-center py-6 bg-[#262626] font-medium ">
+            <p>CopyRight <i class=" text-red-600 fa-solid fa-copyright"></i> Monirul</p>
+        </div>
+    </div>
+    <script>
+        var manu = document.getElementById("manu")
+        var tablinks = document.getElementsByClassName("tablink");
+        var tabcontents = document.getElementsByClassName("tabcontent");
+        function opentab(x) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("after:w-full")
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("block")
+                tabcontent.classList.add("hidden")
+            }
+            event.currentTarget.classList.add("after:w-full");
+            document.getElementById(x).classList.add("block")
+            document.getElementById(x).classList.remove("hidden")
+        }
+        function openmanu() {
+            manu.style.right = "0"
+        }
+        function closemanu() {
+            manu.style.right = "-200px"
+        }
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyWUKVT6UJrULzzM6ap8aU04jXJwE6CW15Js-w0XauqV5qVy9ije26WWBDdzSbcI1PB/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg");
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerText = "Message Sent Successfuly"
+                    setTimeout(() => {
+                        msg.innerHTML = ''
+                    }, 5000)
+                    form.reset();
+                }
+                )
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+</body>
+
+</html>
